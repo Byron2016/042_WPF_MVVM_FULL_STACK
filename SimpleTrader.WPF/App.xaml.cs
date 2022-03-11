@@ -18,10 +18,10 @@ namespace SimpleTrader.WPF
         protected override void OnStartup(StartupEventArgs e)
         {
             //Test llamada a API funciona.
-            new MajorIndexService().GetMajorIndex(Domain.Models.MajorIndexType.DowJones).ContinueWith((task) =>
-            {
-                var index = task.Result;
-            });
+            //new MajorIndexService().GetMajorIndex(Domain.Models.MajorIndexType.DowJones).ContinueWith((task) =>
+            //{
+            //    var index = task.Result;
+            //});
 
             Window window = new MainWindow();
             window.DataContext = new MainViewModel(); //v3 23.07
