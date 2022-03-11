@@ -14,9 +14,13 @@ namespace SimpleTrader.FinancialModelingPrepAPI.Services
     {
         public async Task<MajorIndex> GetMajorIndex(MajorIndexType indexType)
         {
+            string apiKey = "apikey=053bd0088c22d83c10c8d680215c9924";
+
+            string uri = "https://financialmodelingprep.com//api/v3/majors-indexes/" + GetUriSuffix(indexType) + "?" + apiKey;
+
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync("https://financialmodelingprep.com//api/v3/majors-indexes/.DJI?apikey=053bd0088c22d83c10c8d680215c9924");
+                HttpResponseMessage response = await client.GetAsync(uri);
 
                 string jsonResponse = await response.Content.ReadAsStringAsync();
 
@@ -25,6 +29,21 @@ namespace SimpleTrader.FinancialModelingPrepAPI.Services
                 majorIndex.Type = indexType;
 
                 return majorIndex;
+            }
+        }
+
+        private string GetUriSuffix(MajorIndexType indexType)
+        {
+            switch (indexType)
+            {
+                case MajorIndexType.DowJones:
+                    return ".DJI";
+                case MajorIndexType.Nasdaq:
+                    return ".IXIC";
+                case MajorIndexType.SP500:
+                    return ".INX";
+                default:
+                    return ".DJI";
             }
         }
     }
