@@ -2,12 +2,16 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Style x:Key="NavButton" TargetType="RadioButton">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Padding" Value="10 5"/>
+        <Setter Property="FontSize" Value="18"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="RadioButton">
                     <Grid>
                         <TextBlock 
                             Text="{TemplateBinding Content}"
+                            Padding="{TemplateBinding Padding}"
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
                     </Grid>
                 </ControlTemplate>
