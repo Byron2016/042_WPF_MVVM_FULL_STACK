@@ -6,12 +6,13 @@ using SimpleTrader.EntityFramework.Services;
 
 IDataService<User> userService = new GenericDataService<User>(new SimpleTraderDbContextFactory());
 
-userService.Create(new User { 
-    Username = "Test" ,
-    Email = "test@yahoo.com",
-    Password = "TestPassword",
-    DatedJoined = DateTime.UtcNow.Date
-}).Wait();
+//userService.Create(new User { 
+//    Username = "Test" ,
+//    Email = "test@yahoo.com",
+//    Password = "TestPassword",
+//    DatedJoined = DateTime.UtcNow.Date
+//}).Wait();
 
 
+Console.WriteLine(userService.GetAll().Result.Count());
 Console.ReadLine();
