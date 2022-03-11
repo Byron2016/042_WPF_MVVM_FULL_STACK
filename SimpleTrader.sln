@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTrader.WPF", "SimpleTrader.WPF\SimpleTrader.WPF.csproj", "{4041D5A1-4210-4625-850F-494A70AFD2F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTrader.FinancialModelingPrepAPI", "SimpleTrader.FinancialModelingPrepAPI\SimpleTrader.FinancialModelingPrepAPI.csproj", "{313F2683-6E77-4526-968E-7415C2708BDB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4041D5A1-4210-4625-850F-494A70AFD2F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4041D5A1-4210-4625-850F-494A70AFD2F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4041D5A1-4210-4625-850F-494A70AFD2F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{313F2683-6E77-4526-968E-7415C2708BDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{313F2683-6E77-4526-968E-7415C2708BDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{313F2683-6E77-4526-968E-7415C2708BDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{313F2683-6E77-4526-968E-7415C2708BDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
