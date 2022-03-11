@@ -18,12 +18,14 @@ IDataService<User> userService = new GenericDataService<User>(new SimpleTraderDb
 
 //Console.WriteLine(userService.Get(2).Result);
 
-Console.WriteLine(userService.Update(2 , new User
-{
-    Username = "TestNuevo",
-    Email = "test@yahoo.com",
-    Password = "TestPassword",
-    DatedJoined = DateTime.UtcNow.Date
-}).Result);
+//Console.WriteLine(userService.Update(2 , new User
+//{
+//    Username = "TestNuevo",
+//    Email = "test@yahoo.com",
+//    Password = "TestPassword",
+//    DatedJoined = DateTime.UtcNow.Date
+//}).Result);
+
+Console.WriteLine(userService.Delete(2).Result);
 
 Console.ReadLine();
