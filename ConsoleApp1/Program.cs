@@ -14,5 +14,9 @@ IDataService<User> userService = new GenericDataService<User>(new SimpleTraderDb
 //}).Wait();
 
 
-Console.WriteLine(userService.GetAll().Result.Count());
+//Console.WriteLine(userService.GetAll().Result.Count());
+
+Console.WriteLine(userService.Get(2).Result);
+
+
 Console.ReadLine();
