@@ -23,7 +23,8 @@ namespace SimpleTrader.EntityFramework
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-S68ME9Q\\MSSQLSERVER_2019;Initial Catalog=SimpleTraderDB;User Id=bv; Password=123456;MultipleActiveResultSets=true");
+            //optionsBuilder.UseSqlServer("Server=DESKTOP-S68ME9Q\\MSSQLSERVER_2019;Initial Catalog=SimpleTraderDB;User Id=bv; Password=123456;MultipleActiveResultSets=true");
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-S68ME9Q;Initial Catalog=SimpleTraderDB;persist security info=True;user id=sa;password=123456");
 
             base.OnConfiguring(optionsBuilder);
         }
