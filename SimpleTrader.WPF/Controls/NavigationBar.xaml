@@ -20,7 +20,7 @@
                    FontSize="28"
                    Foreground="White"
                    Text="Simple Trader" Background="{StaticResource BrushPrimary1}"/>
-        <Grid Grid.Row="1" Background="{StaticResource BrushPrimary2}">
+        <Grid Grid.Row="1" RenderOptions.EdgeMode="Aliased" Background="{StaticResource BrushPrimary2}">
             <Grid.Resources>
                 <Style TargetType="RadioButton" BasedOn="{StaticResource NavButton}"/>
             </Grid.Resources>
